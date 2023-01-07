@@ -1,0 +1,16 @@
+{
+  "name": "smtp-forwarder-asnyc-proxy",
+  "description": "SMTP async forwarder that acts as a proxy for slow SMTP servers. It receives the subject, text, html, and credentials, and forwards them as-is to the destination SMTP server using nodemailer.",
+  "version": "1.0.2",
+  "type": "module",
+  "scripts": {
+    "start": "node ./start.js"
+  },
+  "main": "app.js",
+  "dependencies": {
+    "config": "3.3.8",
+    "mailparser": "3.6.3",
+    "nodemailer": "6.8.0",
+    "smtp-server": "3.11.0"
+  }
+}
