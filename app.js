@@ -39,7 +39,12 @@ export const createProxySmtpServer = (config) => {
                         text: parsed.text,
                         html: parsed.html,
                     };
-                    const response = await transport.sendMail(message);
+                    try{
+                        const response = await transport.sendMail(message);
+                    } catch (e) {
+                        console.error(`Failed to email because of ${e}`);
+                    }
+
                 }
             },
             onAuth: (auth, session, callback) => {
